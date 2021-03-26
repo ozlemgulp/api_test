@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import components.UserComponent;
 
-public class SampleTest {
+public class CommandTests {
 
 
 	@Test
@@ -16,9 +16,13 @@ public class SampleTest {
 
 	@Test
 	public void getUser() {
+		
+		
 		UserComponent.getUser("Delphine").then().assertThat().statusCode(200).and().body(containsString("username"));
 
 	}
+
+
 	
 
 }
