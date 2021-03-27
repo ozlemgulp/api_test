@@ -1,11 +1,11 @@
 package components;
 
 
-import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.given;
 
 import config.Spec;
+import io.restassured.response.Response;
+import models.Comment;
 
 public class CommentComponent { 
 	
@@ -21,8 +21,23 @@ public class CommentComponent {
                 .spec(Spec.requestSpec)
                 .param("postId", postId)
                 .get();
+        allCommentsOnPostResponse
+        		.then()
+        		.statusCode(200);
 
         return allCommentsOnPostResponse;
     }
 
+    public static Comment[] getCommentsOnPostAsCommentObj(int postId) {
+        Comment[] allCommentsOnPostResponse = given()
+                .spec(Spec.requestSpec)
+                .param("postId", postId)
+				.when()
+				.get()
+				.then()
+				.statusCode(200)
+				.extract().as(Comment[].class);
+
+        return allCommentsOnPostResponse;
+    }
 }

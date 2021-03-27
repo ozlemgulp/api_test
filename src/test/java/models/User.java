@@ -19,7 +19,7 @@ import java.util.Map;
 public class User {
 
     @JsonProperty("id")
-    private Integer id;
+    private int id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("username")
@@ -38,12 +38,12 @@ public class User {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
