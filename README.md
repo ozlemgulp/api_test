@@ -1,3 +1,4 @@
+[![ozlemgulp](https://circleci.com/gh/ozlemgulp/api-test.svg?style=svg)](https://app.circleci.com/pipelines/github/ozlemgulp/api-test)
 # api_test
 JsonPlaceholder API testing with Restassured
 JsonPlaceholder website Link: https://jsonplaceholder.typicode.com/
