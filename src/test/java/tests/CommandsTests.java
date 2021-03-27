@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import components.UserComponent;
 
-public class CommandTests {
+public class CommandsTests {
 
 
 	@Test
