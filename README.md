@@ -28,11 +28,9 @@ RestAssured used for the testing and validation of RESTAPIs.<br/>
 TestNG framework used for running and designing tests.<br/>
 
 ## Technologies
-* Java - version 8.0
-* Maven  - version Apache Maven 3.6.3 
-![Screenshots](./img/maven.jpg)
-* TestNg 
-![testNG](./img/testNG.png)
+* Java - version 8.0<br/>
+* Maven  - version Apache Maven 3.6.3 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/surefire/)<br/>
+* TestNg [![TestNg](https://548225-1759080-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/06/testng-logo.jpg)](https://testng.org/doc/)<br/>
 * RestAssured 
 ![RestAssured](./img/restAssured.png)
 ## Prerequisites
