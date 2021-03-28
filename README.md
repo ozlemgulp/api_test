@@ -15,6 +15,7 @@ JsonPlaceholder website Link: https://jsonplaceholder.typicode.com/
 
 ## General info
 Maven project created to start API test framework by using RestAssure
+![alt text](https://commons.wikimedia.org/wiki/File:Maven_logo.svg#/media/File:Maven_logo.gif)
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
