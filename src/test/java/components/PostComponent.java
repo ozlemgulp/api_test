@@ -2,18 +2,18 @@ package components;
 
 import static io.restassured.RestAssured.given;
 
-import config.Spec;
+import general.Spec;
 import io.restassured.response.Response;
 import models.Post;
 
 public class PostComponent {
 
-	// Create new Specification for each component and set the path "posts"
-	public static Spec spec = new Spec("posts");
+	public static Spec spec = new Spec();
 
 	public static Response getPosts() {
 		Response allPostsResponse = given()
 				.spec(Spec.requestSpec)
+				.basePath("posts")
 				.get();
 		allPostsResponse
 				.then()
@@ -24,6 +24,7 @@ public class PostComponent {
 	public static Response getPosts(int userId) {
 		Response allPostsResponse = given()
 				.spec(Spec.requestSpec)
+				.basePath("posts")
 				.param("userId", userId)
 				.get();
 		allPostsResponse
@@ -35,6 +36,7 @@ public class PostComponent {
 	public static Post[] getUserPostsAsPostObj(int userId) {
 		Post[] userPostsResponse = given()
 				.spec(Spec.requestSpec)
+				.basePath("posts")
 				.param("userId", userId)
 				.when()
 				.get()

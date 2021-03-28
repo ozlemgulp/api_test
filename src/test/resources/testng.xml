@@ -1,12 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Restassured">
-    <listeners>
-        <listener class-name="general.TestListener"/>
-    </listeners>
-	<test name="Sample_Test">
+	<listeners>
+		<listener class-name="general.TestListener" />
+	</listeners>
+	<test name="ApITest">
 		<parameter name="userName" value="Delphine" />
+		<parameter name="maxAllowedResponseTime" value="10" />
+
 		<classes>
-			<class name="tests.UsersTests" />
+			<class name="tests.BasicTests" />
 		</classes>
 	</test>
 </suite>
