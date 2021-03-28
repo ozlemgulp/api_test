@@ -30,9 +30,8 @@ TestNG framework used for running and designing tests.<br/>
 ## Technologies
 * Java - version 8.0<br/>
 * Maven  - version Apache Maven 3.6.3 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/surefire/)<br/>
-* TestNg [![TestNg](https://548225-1759080-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/06/testng-logo.jpg)](https://testng.org/doc/)<br/>
-* RestAssured 
-![RestAssured](./img/restAssured.png)
+* TestNg<br/>
+* RestAssured<br/>
 ## Prerequisites
 * Needs JDK 8+ to be installed. (For more information about installation : https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/Title.htm)
 * Needs Maven to be installed. (For more information about installation : https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
