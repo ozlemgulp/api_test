@@ -22,7 +22,7 @@ Testing and validating JsonPlaceholder REST services with RestAssured in Java.<b
 
 ## General info
 This is test automation framework skeleton.<br/>
-JsonPlaceholder is Free fake API for testing and prototyping. JsonPlaceholder services used in this project.<br/>
+JsonPlaceholder is Free fake API for testing and prototyping.<br/>
 RestAssured used for the testing and validation of RESTAPIs.<br/>
 TestNG framework used for running and designing tests.<br/>
 
