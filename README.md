@@ -18,7 +18,6 @@ Testing and validating JsonPlaceholder REST services with RestAssured in Java.<b
 * [TestReport](#testreport)
 * [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
@@ -75,9 +74,6 @@ To-do list:
 
 ## Status
 Project is:  _finished_
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
 
 ## Contact
 Created by [@ogpamuk](https://github.com/ozlemgulp) - feel free to contact me!
