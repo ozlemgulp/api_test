@@ -12,13 +12,14 @@ public class TestListener implements ISuiteListener, ITestListener {
 	final static Logger log = Logger.getLogger(BasicLogger.class);
 	long testSuideStart;
 	long start;
+
 	public void onStart(ISuite iSuite) {
 		testSuideStart = System.currentTimeMillis();
 
 	}
 
 	public void onFinish(ISuite iSuite) {
-		//Display the Test Suite Execution Duration
+		// Display the Test Suite Execution Duration
 		log.info("Test Suite Execution Duration: " + (System.currentTimeMillis() - testSuideStart));
 		log.info("Finished running all the tests.");
 	}
@@ -28,12 +29,10 @@ public class TestListener implements ISuiteListener, ITestListener {
 		start = System.currentTimeMillis();
 		log.info("Starting test " + iTestResult.getName());
 	}
-	
-	
 
 	@Override
 	public void onTestSuccess(ITestResult iTestResult) {
-		log.info("Test " + iTestResult.getName() + " PASSED" );
+		log.info("Test " + iTestResult.getName() + " PASSED");
 	}
 
 	@Override
@@ -53,17 +52,15 @@ public class TestListener implements ISuiteListener, ITestListener {
 
 	@Override
 	public void onStart(ITestContext iTestContext) {
-		//Display Test StartTime 
-		log.info(iTestContext.getName() +"Test Started" + iTestContext.getStartDate() );
+		// Display Test StartTime
+		log.info(iTestContext.getName() + "Test Started" + iTestContext.getStartDate());
 
 	}
 
 	@Override
 	public void onFinish(ITestContext iTestContext) {
-		//Display Test EndTime 
-		log.info(iTestContext.getName()+ "Test Finished" + iTestContext.getEndDate() );
-
-
+		// Display Test EndTime
+		log.info(iTestContext.getName() + "Test Finished" + iTestContext.getEndDate());
 
 	}
 }
