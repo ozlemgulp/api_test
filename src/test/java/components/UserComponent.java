@@ -4,8 +4,8 @@ import static io.restassured.RestAssured.given;
 
 import org.apache.log4j.Logger;
 
-import config.Spec;
 import general.BasicLogger;
+import general.Spec;
 import io.restassured.response.Response;
 import models.User;
 
@@ -14,12 +14,12 @@ public class UserComponent {
 	final static Logger log = Logger.getLogger(BasicLogger.class);
 
 
-	// Create new Specification for each component and set the path "users"
-	public static Spec spec = new Spec("users");
+	public static Spec spec = new Spec();
 
 	public static Response getUser() {
 		Response allUsersResponse = given()
 				.spec(Spec.requestSpec)
+				.basePath("users")
 				.get();
 		allUsersResponse
 				.then()
@@ -30,6 +30,7 @@ public class UserComponent {
 	public static Response getUser(String username) {
 		Response usersResponse = given()
 				.spec(Spec.requestSpec)
+				.basePath("users")
 				.param("username", username)
 				.get();
 		usersResponse
@@ -43,6 +44,7 @@ public class UserComponent {
 	public static User[] getUserAsUserObj(String username) {
 		User[] users = given()
 				.spec(Spec.requestSpec)
+				.basePath("users")
 				.param("username", username)
 				.when()
 				.get()
@@ -50,6 +52,14 @@ public class UserComponent {
 				.statusCode(200)
 				.extract().as(User[].class);
 		return users;
+	}
+	
+	public static int getServerResponseCode() {
+		int serverResponse = given()
+				.spec(Spec.requestSpec)
+				.get()
+				.getStatusCode();
+		return serverResponse;
 	}
 
 }

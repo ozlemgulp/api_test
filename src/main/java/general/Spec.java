@@ -1,12 +1,10 @@
-package config;
+package general;
 
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import general.BasicLogger;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -23,7 +21,7 @@ public class Spec {
 	public static ResponseSpecification successResponseSpec;
 	
 	//Handle Specification related chnages from one Class
-	public Spec(String path) {
+	public Spec() {
 		try {
 			new EnvProp();
 		} catch (IOException e) {
@@ -31,9 +29,11 @@ public class Spec {
 			e.printStackTrace();
 		}
 
-		Spec.requestSpec = new RequestSpecBuilder().setBaseUri(EnvProp.baseUrl)
-				.addHeader("Content-Type", "application/json").setBasePath(path).addFilter(new ResponseLoggingFilter())
-				.addFilter(new RequestLoggingFilter()).build();
+		Spec.requestSpec = new RequestSpecBuilder()
+				.setBaseUri(EnvProp.baseUrl)
+				.addHeader("Content-Type", "application/json")
+				.addFilter(new ResponseLoggingFilter())
+				.build();
 		;
 	}
 

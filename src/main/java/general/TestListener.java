@@ -6,16 +6,20 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.SkipException;
 
 public class TestListener implements ISuiteListener, ITestListener {
 
 	final static Logger log = Logger.getLogger(BasicLogger.class);
+	public static Spec spec = new Spec();
+
 	long testSuideStart;
 	long start;
 
 	public void onStart(ISuite iSuite) {
 		testSuideStart = System.currentTimeMillis();
-
+		if (!APIServerTests.isAppBackendUp()) // check if the service under test is up before running any tests
+			throw new SkipException("Skipping tests as the application backend is down.");
 	}
 
 	public void onFinish(ISuite iSuite) {

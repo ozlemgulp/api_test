@@ -1,12 +1,10 @@
-package config;
+package general;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-
-import general.BasicLogger;
 
 /*
  * Get the environment dependent parameters from properties file. By defining or
