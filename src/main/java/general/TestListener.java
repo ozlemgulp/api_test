@@ -18,6 +18,7 @@ public class TestListener implements ISuiteListener, ITestListener {
 	}
 
 	public void onFinish(ISuite iSuite) {
+		//Display the Test Suite Execution Duration
 		log.info("Test Suite Execution Duration: " + (System.currentTimeMillis() - testSuideStart));
 		log.info("Finished running all the tests.");
 	}

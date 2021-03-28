@@ -3,10 +3,10 @@
     <listeners>
         <listener class-name="general.TestListener"/>
     </listeners>
-	<test name="Sample Test">
+	<test name="Sample_Test">
 		<parameter name="userName" value="Delphine" />
 		<classes>
-			<class name="tests.SampleTest" />
+			<class name="tests.UsersTests" />
 		</classes>
 	</test>
 </suite>
