@@ -97,9 +97,9 @@ public class BasicTests {
 
 	}
 
-	@Parameters({ "userName", "maxAllowedResponseTime" }) // get the userName from testng.xml
+	@Parameters({ "userName", "maxAllowedResponseTime" }) // get the userName and maxAllowedResponseTime from testng.xml
 	@Test(dependsOnMethods = "verifyThatUserNameExist") // If UserName not exist do not run this test
-	public void verifyResponceTime(String userName, long maxAllowedResponseTime) {
+	public void verifyResponseTime(String userName, long maxAllowedResponseTime) {
 		boolean result = true;
 		users = UserComponent.getUserAsUserObj(userName);
 		if (users.length > 0) {
@@ -109,6 +109,7 @@ public class BasicTests {
 				// Get comments for each post
 				for (int j = 0; j < posts.length; j++) {
 					long responseTime = CommentComponent.getCommentsOnPost(posts[j].getId()).getTime();
+					//If actual response time greater than the allowed response time test will fail
 					if (responseTime - maxAllowedResponseTime > 0) {
 						result = false;
 					}
