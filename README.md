@@ -25,8 +25,6 @@ JsonPlaceholder is Free fake API for testing and prototyping.<br/>
 RestAssured used for the testing and validation of RESTAPIs.<br/>
 TestNG framework used for running and designing tests.<br/>
 
-[![Watch the video](https://share.gifyoutube.com/KzB6Gb.gif)](./img/Video_21-03-29_15-20-20.wmv)<br/>
-
 ## Technologies
 * Java - version 8.0<br/>
 * Maven  - version Apache Maven 3.6.3 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/surefire/)<br/>
