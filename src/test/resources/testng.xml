@@ -5,7 +5,7 @@
 	</listeners>
 	<test name="ApITest">
 		<parameter name="userName" value="Delphine" />
-		<parameter name="maxAllowedResponseTime" value="10" />
+		<parameter name="maxAllowedResponseTime" value="100000000" />
 
 		<classes>
 			<class name="tests.BasicTests" />
